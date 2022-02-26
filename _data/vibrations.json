@@ -11,41 +11,21 @@
       "intro": "Вам будет предоставлено 16 ценных уроков по развитию каждой из ваших врожденных способностей, которые сделают вашу жизнь успешной и благополучной:\n\n",
       "lessons": [
         {
-        "_id": "1",
-        "intro": "Как развить свой личный Дар и скрытый потенциал! Вам будет открыт главный секрет развития ваших высших способностей, без которого невозможно достичь успеха в практиках.",
-        "pdf": "http/cdn/lesson"
-      }
+          "_id": "1",
+          "intro": "Как развить свой личный Дар и скрытый потенциал! Вам будет открыт главный секрет развития ваших высших способностей, без которого невозможно достичь успеха в практиках.",
+          "pdf": "http/cdn/lesson"
+        },
+        {
+          "_id": "2",
+          "intro": "Вы научитесь подчинять себе ситуации и людей, притягивать деньги, ценное материальное имущество, желанные отношения, необходимые события и все, на что были нацелены!",
+          "pdf": "http/cdn/lesson"
+        },
+        {
+          "_id": "3",
+          "intro": "Вы будете исполнять желания и управлять реальностью! Вам будут даны действенные инструменты, с помощью которых вы сможете управлять событиями жизни, мгновенно изменять ход любой ситуации!",
+          "pdf": "http/cdn/lesson"
+        }
       ]
     }
-  },
-  {
-    "_id": "2",
-    "hiddenQualities": "Your hidden qualities",
-    "personalGift": "Your personal gift",
-    "hiddenAbilities": "Your hidden abilities",
-    "destination": "Your destination",
-    "business": "Your business",
-    "perspectives": "Your perspectives",
-    "individualProgram": "Your individual program"
-  },
-  {
-    "_id": "3",
-    "hiddenQualities": "Your hidden qualities",
-    "personalGift": "Your personal gift",
-    "hiddenAbilities": "Your hidden abilities",
-    "destination": "Your destination",
-    "business": "Your business",
-    "perspectives": "Your perspectives",
-    "individualProgram": "Your individual program"
-  },
-  {
-    "_id": "4",
-    "hiddenQualities": "Your hidden qualities",
-    "personalGift": "Your personal gift",
-    "hiddenAbilities": "Your hidden abilities",
-    "destination": "Your destination",
-    "business": "Your business",
-    "perspectives": "Your perspectives",
-    "individualProgram": "Your individual program"
   }
 ]

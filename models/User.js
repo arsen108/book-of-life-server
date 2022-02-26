@@ -5,8 +5,18 @@ const jwt = require('jsonwebtoken');
 
 const UserSchema = new mongoose.Schema({
     name: {
-        type: String,
-        required: [true, 'Please add a name']
+        first: {
+            type: String,
+            required: [true, 'Please add a first name']
+        },
+        last: {
+            type: String,
+            required: [true, 'Please add a last name']
+        },
+        father: {
+            type: String,
+            required: [true, "Please add a father's name"]
+        }
     },
     email: {
         type: String,
@@ -23,6 +33,10 @@ const UserSchema = new mongoose.Schema({
         minlength: 6,
         select: false
     },
+    wizardStep: {
+        type: Number,
+        enum: [1, 2, 0]
+    },
     resetPasswordToken: String,
     resetPasswordExpire: Date,
     createdAt: {
@@ -36,7 +50,7 @@ const UserSchema = new mongoose.Schema({
 });
 
 // Encrypt password using bcrypt
-UserSchema.pre('save', async function(next) {
+UserSchema.pre('save', async function (next) {
     if (!this.isModified('password')) {
         next();
     }
@@ -46,19 +60,19 @@ UserSchema.pre('save', async function(next) {
 });
 
 // Sign JWT and return
-UserSchema.methods.getSignedJwtToken = function() {
-    return jwt.sign({ id: this._id }, process.env.JWT_SECRET, {
+UserSchema.methods.getSignedJwtToken = function () {
+    return jwt.sign({id: this._id}, process.env.JWT_SECRET, {
         expiresIn: process.env.JWT_EXPIRE
     });
 };
 
 // Match user entered password to hashed password in database
-UserSchema.methods.matchPassword = async function(enteredPassword) {
+UserSchema.methods.matchPassword = async function (enteredPassword) {
     return await bcrypt.compare(enteredPassword, this.password);
 };
 
 // Generate and hash password token
-UserSchema.methods.getResetPasswordToken = function() {
+UserSchema.methods.getResetPasswordToken = function () {
     // Generate token
     const resetToken = crypto.randomBytes(20).toString('hex');
 
